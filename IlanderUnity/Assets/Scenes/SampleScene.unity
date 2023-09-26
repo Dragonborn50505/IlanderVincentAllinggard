@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 389351729}
   - component: {fileID: 389351728}
   - component: {fileID: 389351730}
+  - component: {fileID: 389351731}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Players
@@ -223,6 +224,33 @@ MonoBehaviour:
   moveSpeed: 8
   isPlayer1: 1
   obj: {fileID: 389351729}
+--- !u!50 &389351731
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389351727}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &473339300
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +262,7 @@ GameObject:
   - component: {fileID: 473339302}
   - component: {fileID: 473339301}
   - component: {fileID: 473339303}
+  - component: {fileID: 473339304}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Players
@@ -323,6 +352,33 @@ MonoBehaviour:
   moveSpeed: 8
   isPlayer1: 0
   obj: {fileID: 473339302}
+--- !u!50 &473339304
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473339300}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +616,7 @@ GameObject:
   - component: {fileID: 968493033}
   - component: {fileID: 968493032}
   m_Layer: 0
-  m_Name: Space
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1069,6 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1918036625}
+  isRoofObjekt: 1
 --- !u!212 &1918036624
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1111,7 +1168,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9921439, b: 0, a: 1}
+  m_Color: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1130,8 +1187,8 @@ Transform:
   m_GameObject: {fileID: 1918036622}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 12, y: 3, z: 0}
+  m_LocalScale: {x: 0.5, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
