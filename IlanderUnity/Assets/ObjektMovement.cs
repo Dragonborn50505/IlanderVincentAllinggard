@@ -6,6 +6,7 @@ public class ObjektMovement : MonoBehaviour
 {
     public Transform obj;
     Vector2 movement;
+    public bool isRoofObjekt;
 
 
     // Start is called before the first frame update
@@ -18,8 +19,24 @@ public class ObjektMovement : MonoBehaviour
     void Update()
     {
         movement.x = 5;
-        Vector3 tempVect = new Vector3(movement.x,movement.y);
+        Vector3 tempVect = new Vector3(movement.x,0);
+        Vector3 RoofStartingPosition = new Vector3(x: 12, y: 3);
+        Vector3 GroundStartingPosition = new Vector3(x: 12, y: -3);
         tempVect = tempVect.normalized * movement * Time.deltaTime;
-        obj.transform.position -= tempVect;
+        if (isRoofObjekt && obj.position.x < -12)
+        { 
+            obj.transform.position = RoofStartingPosition;
+        }
+        if (!isRoofObjekt && obj.position.x < -12)
+        {
+            obj.transform.position = GroundStartingPosition;
+        }
+        else
+        {
+            obj.transform.position -= tempVect;
+        }
+
+
+        
     }
 }
