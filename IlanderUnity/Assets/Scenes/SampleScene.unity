@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 389351728}
   - component: {fileID: 389351730}
   - component: {fileID: 389351731}
+  - component: {fileID: 389351732}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Players
@@ -203,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 389351727}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 1.5, z: -1}
+  m_LocalPosition: {x: -8, y: 1.53, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -251,6 +252,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!247 &389351732
+ConstantForce2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389351727}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0}
+  m_RelativeForce: {x: 0, y: 0}
+  m_Torque: 0
 --- !u!1 &473339300
 GameObject:
   m_ObjectHideFlags: 0
