@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isPlayer1;
     public Transform obj;
     Vector2 movement;
+    public static Rigidbody2D rb;
+    //public static Rigidbody rsb;
+
     
 
     //private ConstantForce2D cForce;
@@ -34,18 +38,27 @@ public class PlayerMovement : MonoBehaviour
         {
             movement.x = Input.GetAxisRaw("Horizontal2");
             movement.y = Input.GetAxisRaw("Vertical2");
+            //if(Input.GetKeyDown(KeyCode.T))
+            //{
+            //    forceDirection = forceDirection * -1; 
+            //}
         }
-
-        if (movement.y > 0)
-        {
-            Debug.Log("Gravity Off"); 
-            Physics.gravity = new Vector3(0,0);
-           //forceDirection = forceDirection * -1;
-           //this.rigidbody2D.gravityScale = 0.0f;
-        }
+        
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
 
+        if (movement.y != 0)
+        { 
+            Debug.Log("Gravity Off");
+            //rsb.useGravity = false;
+            //rb.useGravity = false;
+            //rb.gravityScale = 0.0f;
+            //Physics.gravity = new Vector3(0,0);
+            Physics2D.gravity = Vector3.zero;
+            ////forceDirection = forceDirection * -1;
+            //this.rigidbody2D.gravityScale = 0.0f;
+        }
+        
         obj.transform.position += tempVect;
     }
 }

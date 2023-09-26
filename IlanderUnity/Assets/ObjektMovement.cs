@@ -20,8 +20,8 @@ public class ObjektMovement : MonoBehaviour
     {
         movement.x = 5;
         Vector3 tempVect = new Vector3(movement.x,0);
-        Vector3 RoofStartingPosition = new Vector3(x: 12, y: 3);
-        Vector3 GroundStartingPosition = new Vector3(x: 12, y: -3);
+        Vector3 RoofStartingPosition = new Vector3(x: 12 + Random.Range(0, 10), y: 3, -1);
+        Vector3 GroundStartingPosition = new Vector3(x: 12 + Random.Range(0, 10), y: -3, -1);
         tempVect = tempVect.normalized * movement * Time.deltaTime;
         if (isRoofObjekt && obj.position.x < -12)
         { 
