@@ -47,18 +47,30 @@ public class PlayerMovement : MonoBehaviour
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
 
-        if (movement.y != 0)
+        if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)
         { 
-            Debug.Log("Gravity Off");
+            //Debug.Log("Gravity Off");
             //rsb.useGravity = false;
             //rb.useGravity = false;
             //rb.gravityScale = 0.0f;
             //Physics.gravity = new Vector3(0,0);
             Physics2D.gravity = Vector3.zero;
+            Debug.Log("Gravity Off 2");
             ////forceDirection = forceDirection * -1;
             //this.rigidbody2D.gravityScale = 0.0f;
         }
         
         obj.transform.position += tempVect;
+        
+        
+       
     }
+    private void OnTriggerEnter2D(Collider2D collison)
+    {
+        if (collison.gameObject.tag == "Player")
+        {
+            
+        }
+    }
+    
 }
