@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
             //rb.gravityScale = 0.0f;
             //Physics.gravity = new Vector3(0,0);
             Physics2D.gravity = Vector3.zero;
-            Debug.Log("Gravity Off 2");
+                                                        //Debug.Log("Gravity Off 2");
             ////forceDirection = forceDirection * -1;
             //this.rigidbody2D.gravityScale = 0.0f;
         }
