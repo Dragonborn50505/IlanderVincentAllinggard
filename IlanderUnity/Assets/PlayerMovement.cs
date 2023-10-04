@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
 
         if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)
-        { 
+        {
             //Debug.Log("Gravity Off");
             //rsb.useGravity = false;
             //rb.useGravity = false;
@@ -60,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
             ////forceDirection = forceDirection * -1;
             //this.rigidbody2D.gravityScale = 0.0f;
         }
-        
         obj.transform.position += tempVect;
         
         
@@ -68,14 +67,9 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collison)
     {
-        Debug.Log("Player hit");
         if (collison.gameObject.tag == "Player")
         {
             
-        }
-        else
-        {
-            Debug.Log("Hit");
         }
     }
 

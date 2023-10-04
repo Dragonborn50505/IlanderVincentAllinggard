@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 726883934}
   - component: {fileID: 726883933}
   m_Layer: 5
-  m_Name: PlayerOneScore
+  m_Name: playerOneScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1211,7 +1211,7 @@ GameObject:
   - component: {fileID: 1111485639}
   - component: {fileID: 1111485638}
   m_Layer: 5
-  m_Name: PlayerTwoScore
+  m_Name: playerTwoScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2211,6 +2211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Point
       objectReference: {fileID: 0}
+    - target: {fileID: 7136145664223915259, guid: 341deb6c50a749c4f9ae4957ab11c79a, type: 3}
+      propertyPath: m_TagString
+      value: Point
+      objectReference: {fileID: 0}
     - target: {fileID: 7679393858411962147, guid: 341deb6c50a749c4f9ae4957ab11c79a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
@@ -2301,7 +2305,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2319,6 +2323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1761add25cc65442970f6ad19106915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOneScore: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

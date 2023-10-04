@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Players
+  - Point
   layers:
   - Default
   - TransparentFX

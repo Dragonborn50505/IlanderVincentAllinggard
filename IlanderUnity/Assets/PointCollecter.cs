@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class PointCollecter : MonoBehaviour
 {
@@ -17,16 +19,40 @@ public class PointCollecter : MonoBehaviour
     {
         
     }
-    //[SerializeField] private TextMeshProUGUI PlayerOneScore;
+    [SerializeField] private TextMeshProUGUI playerOneScore;
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("test");
+        //Debug.Log("test");
         if (collision.gameObject.CompareTag("Players"))
-        {
-                                                                    //ObjektMovement.obj.transform.position = ObjektMovement.SpaceObjekt;
+        { 
             point++;
-            //PlayerOneScore.text = "Player 1: " + point;
+            playerOneScore.text = "Player 1: " + point;
             Debug.Log("Player: " + point);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//[SerializeField] public TMPro.TextMeshProUGUI PlayerOneScore;
+//public TMP_Text PlayerOneScore;
+//public TextMeshProUGUI PlayerOneScore;
+//ObjektMovement.obj.transform.position = ObjektMovement.SpaceObjekt;h
