@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -65,12 +66,17 @@ public class PlayerMovement : MonoBehaviour
         
        
     }
-    private void OnTriggerEnter2D(Collider2D collison)
+    public void OnTriggerEnter2D(Collider2D collison)
     {
+        Debug.Log("Player hit");
         if (collison.gameObject.tag == "Player")
         {
             
         }
+        else
+        {
+            Debug.Log("Hit");
+        }
     }
-    
+
 }

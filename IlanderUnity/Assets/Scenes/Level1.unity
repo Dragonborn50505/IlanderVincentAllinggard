@@ -385,7 +385,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &389351732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &473339305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2184,6 +2184,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443283886028722680, guid: 9a8b51233d403ab45bf7eddd2a8410fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877598404511523444, guid: 9a8b51233d403ab45bf7eddd2a8410fd, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

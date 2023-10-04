@@ -18,14 +18,15 @@ public class PointCollecter : MonoBehaviour
         
     }
     //[SerializeField] private TextMeshProUGUI PlayerOneScore;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("test");
         if (collision.gameObject.CompareTag("Players"))
         {
                                                                     //ObjektMovement.obj.transform.position = ObjektMovement.SpaceObjekt;
             point++;
             //PlayerOneScore.text = "Player 1: " + point;
-            Debug.Log("coins: " + point);
+            Debug.Log("Player: " + point);
         }
     }
 }
