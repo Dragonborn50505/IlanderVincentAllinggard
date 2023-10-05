@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     
     public float moveSpeed = 4f;
     public bool isPlayer1;
+    public bool isPlayer2;
     public Transform obj;
     Vector2 movement;
     public static Rigidbody2D rb;
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
 
-        if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)
+        if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)
         {
             //Debug.Log("Gravity Off");
             //rsb.useGravity = false;
