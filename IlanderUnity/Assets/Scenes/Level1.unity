@@ -2323,6 +2323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1761add25cc65442970f6ad19106915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obj: {fileID: 0}
   playerOneScore: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

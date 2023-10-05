@@ -65,12 +65,11 @@ public class PlayerMovement : MonoBehaviour
         
        
     }
-    public void OnTriggerEnter2D(Collider2D collison)
+    public void OnCollisionEnter2D(Collision2D collison)
     {
         if (collison.gameObject.tag == "Player")
         {
-            
+            Debug.Log("Player Meet");
         }
     }
-
 }

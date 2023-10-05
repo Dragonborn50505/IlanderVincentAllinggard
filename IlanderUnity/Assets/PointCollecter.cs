@@ -7,6 +7,8 @@ using TMPro;
 public class PointCollecter : MonoBehaviour
 {
     private int point = 0;
+    public Transform obj;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,8 @@ public class PointCollecter : MonoBehaviour
     {
         //Debug.Log("test");
         if (collision.gameObject.CompareTag("Players"))
-        { 
+        {
+            //obj.transform.position = ObjektMovement.spaceObjektPosition;
             point++;
             playerOneScore.text = "Player 1: " + point;
             Debug.Log("Player: " + point);

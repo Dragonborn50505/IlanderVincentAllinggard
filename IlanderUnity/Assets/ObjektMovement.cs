@@ -23,23 +23,23 @@ public class ObjektMovement : MonoBehaviour
         Vector3 tempVect = new Vector3(movement.x,0);
         tempVect = tempVect.normalized * movement * Time.deltaTime;
         
-        Vector3 RoofStartingPosition = new Vector3(x: 12 + Random.Range(0, 20), y: 3, z: -1);
-        Vector3 GroundStartingPosition = new Vector3(x: 12 + Random.Range(0, 20), y: -3, -1);
-        Vector3 SpaceObjekt = new Vector3(x: 12, y: Random.Range(-3, 3), z: -1);
+        Vector3 roofStartingPosition = new Vector3(x: 12 + Random.Range(0, 20), y: 3, z: -1);
+        Vector3 groundStartingPosition = new Vector3(x: 12 + Random.Range(0, 20), y: -3, -1);
+        Vector3 spaceObjektPosition = new Vector3(x: 12, y: Random.Range(-3, 3), z: -1);
         //static extern local function (Vector3 SpaceObjekt = new Vector3(x: 12, y: Random.Range(-3, 3), z: -1));
         //RoofStartingPosition = RoofStartingPosition.normalized * movement * Time.deltaTime;
         
         if (isRoofObjekt && obj.position.x < -12)
         { 
-            obj.transform.position = RoofStartingPosition;
+            obj.transform.position = roofStartingPosition;
         }
         if (isGroundOnjekt && obj.position.x < -12)
         {
-            obj.transform.position = GroundStartingPosition;
+            obj.transform.position = groundStartingPosition;
         }
         if (!isRoofObjekt && !isGroundOnjekt && obj.position.x < -12)
         {
-            obj.transform.position = SpaceObjekt;
+            obj.transform.position = spaceObjektPosition;
         }
         else
         {
