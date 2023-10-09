@@ -73,4 +73,12 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Player Meet");
         }
     }
+
+    public void OnCollisionenter2D(Collider2D Collison)
+    {
+        if (Collison.gameObject.tag == "Obstacle")
+        {
+            Debug.Log("Damage");
+        }
+    }
 }
