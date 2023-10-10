@@ -8,6 +8,7 @@ public class ObjektMovement : MonoBehaviour
     Vector2 movement;
     public bool isRoofObjekt;
     public bool isGroundOnjekt;
+    public bool isPowerUp;
 
 
     // Start is called before the first frame update
@@ -37,7 +38,7 @@ public class ObjektMovement : MonoBehaviour
         {
             obj.transform.position = groundStartingPosition;
         }
-        if (!isRoofObjekt && !isGroundOnjekt && obj.position.x < -12)
+        if (!isRoofObjekt && !isGroundOnjekt && !isPowerUp && obj.position.x < -12)
         {
             obj.transform.position = spaceObjektPosition;
         }

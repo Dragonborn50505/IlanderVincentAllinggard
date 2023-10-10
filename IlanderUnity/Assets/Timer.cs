@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 120f; //120
+    private float currentTime = 0f;
+    private float startingTime = 120f; //120
     private bool GameIsGoing = false;
     private string sceneName;
 
