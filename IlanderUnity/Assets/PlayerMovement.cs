@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isPlayer1;
     public bool isPlayer2;
     public Transform obj;
+    //public Transform obj2;
     Vector2 movement;
     public static Rigidbody2D rb;
 
@@ -48,10 +49,11 @@ public class PlayerMovement : MonoBehaviour
         
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
-
-        if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)         (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.S))
+        Debug.Log(tempVect);
+        
+        if (isPlayer1 && movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)         (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.S))
         {
-            Debug.Log("Gravity Off");
+            //Debug.Log("Gravity Off");
             //rsb.useGravity = false;
             //rb.useGravity = false;
             //rb.gravityScale = 0.0f;
@@ -64,12 +66,25 @@ public class PlayerMovement : MonoBehaviour
             ////forceDirection = forceDirection * -1;
             //this.rigidbody2D.gravityScale = 0.0f;
         }
+        
+        
+        if (isPlayer2 && movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)         (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.S))
+        {
+            //obj2.GetComponent<Rigidbody2D> ().gravityScale = 0;
+        }
         else
         {
-            Debug.Log(Physics2D.gravity);
-            obj.GetComponent<Rigidbody2D> ().gravityScale = 1;
+            //obj2.GetComponent<Rigidbody2D> ().gravityScale = 1;
+
         }
+        
+        //else if (isPlayer2 && movement.y == 0)
+        //{
+            //Debug.Log(Physics2D.gravity);
+        //    obj.GetComponent<Rigidbody2D> ().gravityScale = 1;
+        //}
         obj.transform.position += tempVect;
+        //obj2.transform.position += tempVect;
         
         
        
