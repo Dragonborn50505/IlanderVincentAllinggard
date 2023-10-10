@@ -446,6 +446,18 @@ PrefabInstance:
       propertyPath: isGroundOnjekt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8065299615765855899, guid: 057b5212e86bd75479d95693198ec361, type: 3}
+      propertyPath: m_Color.b
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065299615765855899, guid: 057b5212e86bd75479d95693198ec361, type: 3}
+      propertyPath: m_Color.g
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065299615765855899, guid: 057b5212e86bd75479d95693198ec361, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6156863
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -534,8 +546,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1035128976}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: LeaveToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -1199,6 +1211,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2978818876415236735, guid: 9a8b51233d403ab45bf7eddd2a8410fd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6045301
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978818876415236735, guid: 9a8b51233d403ab45bf7eddd2a8410fd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6045301
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978818876415236735, guid: 9a8b51233d403ab45bf7eddd2a8410fd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
     - target: {fileID: 5877598404511523444, guid: 9a8b51233d403ab45bf7eddd2a8410fd, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -1238,6 +1262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3299fa360c8564ca604824c16a3c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseMenuUi: {fileID: 0}
+  LostOrWinMenu: {fileID: 0}
 --- !u!114 &1035128977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,7 +1590,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1597,6 +1623,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2197824109205522655, guid: 85b514699c1bd3b4dbe83153382c00bf, type: 3}
+      propertyPath: m_Color.b
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197824109205522655, guid: 85b514699c1bd3b4dbe83153382c00bf, type: 3}
+      propertyPath: m_Color.g
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197824109205522655, guid: 85b514699c1bd3b4dbe83153382c00bf, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6156863
+      objectReference: {fileID: 0}
     - target: {fileID: 3843505999908939713, guid: 85b514699c1bd3b4dbe83153382c00bf, type: 3}
       propertyPath: m_Name
       value: Meteor
@@ -2520,7 +2558,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1901840900}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1035128976}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1901840900
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 5f; //120
+    float startingTime = 120f; //120
     private bool GameIsGoing = false;
+    private string sceneName;
 
     
     [SerializeField] GameObject PauseMenuUi;
@@ -20,7 +21,7 @@ public class Timer : MonoBehaviour
         GameIsGoing = true;
         currentTime = startingTime;
         Scene currentScene = SceneManager.GetActiveScene ();
-        string sceneName = currentScene.name;
+        sceneName = currentScene.name;
         
     }
 
@@ -30,7 +31,7 @@ public class Timer : MonoBehaviour
         if ((currentTime > 0) && GameIsGoing)
         {
             currentTime -= 1 * Time.deltaTime;
-            Debug.Log(currentTime);   
+            //Debug.Log(currentTime);   
         }
         if ((currentTime <= 0) && GameIsGoing)
         {
@@ -48,7 +49,19 @@ public class Timer : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1f;
-        //if (sceneName == "Example 1") { SceneManager.LoadScene("Level2"); }
+        if (sceneName == "Level1")
+        {
+            SceneManager.LoadScene("Level2"); 
+            
+        }
+        else if (sceneName == "Level2")
+        {
+            SceneManager.LoadScene("Level3"); 
+        }
+        else if (sceneName == "Level3")
+        {
+            Debug.Log("end");
+        }
         
     }
     public void LeaveToMainMenu()

@@ -1130,7 +1130,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 938977895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1494270921}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &938977895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,7 +2092,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2150,6 +2162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3299fa360c8564ca604824c16a3c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseMenuUi: {fileID: 0}
+  LostOrWinMenu: {fileID: 0}
 --- !u!4 &1494270922
 Transform:
   m_ObjectHideFlags: 0
@@ -2228,6 +2242,18 @@ PrefabInstance:
     - target: {fileID: 6670137453203892786, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082725032604256134, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082725032604256134, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082725032604256134, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.34117648
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2905,6 +2931,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472450349968334522, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.32840866
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472450349968334522, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.32840866
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472450349968334522, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.33962262
+      objectReference: {fileID: 0}
     - target: {fileID: 6322788487747124512, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -3130,8 +3168,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 1494270921}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: LeaveToMainMenu
         m_Mode: 1
         m_Arguments:

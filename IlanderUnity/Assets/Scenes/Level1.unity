@@ -880,7 +880,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 929169104}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1254815423}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &929169104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,6 +1643,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1680258409849723772, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234299382072466382, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 44f071e1016b37649a2b9d1f98cba962, type: 2}
+    - target: {fileID: 3234299382072466382, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
+      propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6322788487747124512, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}

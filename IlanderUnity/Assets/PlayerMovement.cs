@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     
@@ -13,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     public Transform obj;
     Vector2 movement;
     public static Rigidbody2D rb;
-    //public static Rigidbody rsb;
 
     
 
@@ -49,17 +49,25 @@ public class PlayerMovement : MonoBehaviour
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
 
-        if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)
+        if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)         (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.S))
         {
-            //Debug.Log("Gravity Off");
+            Debug.Log("Gravity Off");
             //rsb.useGravity = false;
             //rb.useGravity = false;
             //rb.gravityScale = 0.0f;
             //Physics.gravity = new Vector3(0,0);
-            Physics2D.gravity = Vector3.zero;
-                                                        //Debug.Log("Gravity Off 2");
+            //Physics2D.gravity = Vector3.zero;
+            obj.GetComponent<Rigidbody2D> ().gravityScale = 0;
+            //Physics2D.gravity = new Vector2(0,9.81f);
+            
+            //Debug.Log("Gravity Off 2");
             ////forceDirection = forceDirection * -1;
             //this.rigidbody2D.gravityScale = 0.0f;
+        }
+        else
+        {
+            Debug.Log(Physics2D.gravity);
+            obj.GetComponent<Rigidbody2D> ().gravityScale = 1;
         }
         obj.transform.position += tempVect;
         
