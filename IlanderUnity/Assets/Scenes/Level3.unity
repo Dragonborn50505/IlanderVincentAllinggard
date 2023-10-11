@@ -2261,6 +2261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUi: {fileID: 621058358}
   LostOrWinMenu: {fileID: 393048893}
+  Ui: {fileID: 246775530}
 --- !u!4 &1494270922
 Transform:
   m_ObjectHideFlags: 0

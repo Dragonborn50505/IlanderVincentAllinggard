@@ -10,6 +10,8 @@ public class GameTimer : MonoBehaviour
     
     [SerializeField] GameObject PauseMenuUi;
     [SerializeField] GameObject LostOrWinMenu;
+    [SerializeField] GameObject Ui;
+
     
     // Start is called before the first frame update
     public void Start()
@@ -34,6 +36,7 @@ public class GameTimer : MonoBehaviour
             currentTime = 0;
             GameIsGoing = false;
             Debug.Log("loadGameEndedScreen");
+            Ui.SetActive(false);
             PauseMenuUi.SetActive(false);
             LostOrWinMenu.SetActive(true);
         }
