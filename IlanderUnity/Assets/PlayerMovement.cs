@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,21 +8,15 @@ public class PlayerMovement : MonoBehaviour
     public bool isPlayer1;
     public bool isPlayer2;
     public Transform obj;
+    //public Transform obj2;
     Vector2 movement;
     public static Rigidbody2D rb;
-    //public static Rigidbody rsb;
+    public bool gravity = true;
 
-    
-
-    //private ConstantForce2D cForce;
-    //private Vector3 forceDirection;
-    
     // Start is called before the first frame update
     void Start()
     {
-        //cForce = GetComponent<ConstantForce2D>();
-        //forceDirection = new Vector3(0, -5);
-        //cForce.force = forceDirection;
+        
     }
 
     // Update is called once per frame
@@ -40,31 +31,22 @@ public class PlayerMovement : MonoBehaviour
         {
             movement.x = Input.GetAxisRaw("Horizontal2");
             movement.y = Input.GetAxisRaw("Vertical2");
-            //if(Input.GetKeyDown(KeyCode.T))
-            //{
-            //    forceDirection = forceDirection * -1; 
-            //}
+
         }
         
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
-
-        if (movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)
+        
+        if (isPlayer1 && movement.y != 0)
         {
-            //Debug.Log("Gravity Off");
-            //rsb.useGravity = false;
-            //rb.useGravity = false;
-            //rb.gravityScale = 0.0f;
-            //Physics.gravity = new Vector3(0,0);
-            Physics2D.gravity = Vector3.zero;
-                                                        //Debug.Log("Gravity Off 2");
-            ////forceDirection = forceDirection * -1;
-            //this.rigidbody2D.gravityScale = 0.0f;
+            obj.GetComponent<Rigidbody2D> ().gravityScale = 0;
         }
+        else if (isPlayer1 && movement.y == 0)
+        {
+            obj.GetComponent<Rigidbody2D> ().gravityScale = 1;
+        }
+        
         obj.transform.position += tempVect;
-        
-        
-       
     }
     public void OnCollisionEnter2D(Collision2D collison)
     {
@@ -73,4 +55,13 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Player Meet");
         }
     }
+
+    public void OnCollisionenter2D(Collider2D Collison)
+    {
+        if (Collison.gameObject.tag == "Obstacle")
+        {
+            Debug.Log("Damage");
+        }
+    }
+ 
 }

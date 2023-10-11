@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour
     public bool GameIsPaused = false;
 
     [SerializeField] GameObject PauseMenuUi;
-    
     [SerializeField] GameObject Ui;
     
     // Start is called before the first frame update
@@ -54,4 +53,5 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+    
 }
