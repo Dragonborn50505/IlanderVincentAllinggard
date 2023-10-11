@@ -47,6 +47,7 @@ public class PointCollecter : MonoBehaviour
             }
         }
     }
+    
 }
 
 

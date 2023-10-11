@@ -10,7 +10,6 @@ public class ObjektMovement : MonoBehaviour
     public bool isGroundOnjekt;
     public bool isPowerUp;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +45,7 @@ public class ObjektMovement : MonoBehaviour
         {
             obj.transform.position -= tempVect;
         }
-
-
         
     }
+    
 }

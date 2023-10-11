@@ -1616,7 +1616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3234299382072466382, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6322788487747124512, guid: 1a5fe5dca884f3444838ab623c21406f, type: 3}
       propertyPath: m_Name
@@ -3157,13 +3157,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 4374257315137657122, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5757567546642533280, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 44f071e1016b37649a2b9d1f98cba962, type: 2}
     - target: {fileID: 5757567546642533280, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5757567546642533280, guid: ad2f7a52604bc844fab03b47164d0ca1, type: 3}
       propertyPath: m_CollisionDetection

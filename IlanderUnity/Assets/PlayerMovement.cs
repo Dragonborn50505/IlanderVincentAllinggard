@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -15,18 +11,12 @@ public class PlayerMovement : MonoBehaviour
     //public Transform obj2;
     Vector2 movement;
     public static Rigidbody2D rb;
+    public bool gravity = true;
 
-    
-
-    //private ConstantForce2D cForce;
-    //private Vector3 forceDirection;
-    
     // Start is called before the first frame update
     void Start()
     {
-        //cForce = GetComponent<ConstantForce2D>();
-        //forceDirection = new Vector3(0, -5);
-        //cForce.force = forceDirection;
+        
     }
 
     // Update is called once per frame
@@ -41,53 +31,22 @@ public class PlayerMovement : MonoBehaviour
         {
             movement.x = Input.GetAxisRaw("Horizontal2");
             movement.y = Input.GetAxisRaw("Vertical2");
-            //if(Input.GetKeyDown(KeyCode.T))
-            //{
-            //    forceDirection = forceDirection * -1; 
-            //}
+
         }
         
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
-        Debug.Log(tempVect);
         
-        if (isPlayer1 && movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)         (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.S))
+        if (isPlayer1 && movement.y != 0)
         {
-            //Debug.Log("Gravity Off");
-            //rsb.useGravity = false;
-            //rb.useGravity = false;
-            //rb.gravityScale = 0.0f;
-            //Physics.gravity = new Vector3(0,0);
-            //Physics2D.gravity = Vector3.zero;
             obj.GetComponent<Rigidbody2D> ().gravityScale = 0;
-            //Physics2D.gravity = new Vector2(0,9.81f);
-            
-            //Debug.Log("Gravity Off 2");
-            ////forceDirection = forceDirection * -1;
-            //this.rigidbody2D.gravityScale = 0.0f;
         }
-        
-        
-        if (isPlayer2 && movement.y != 0) //!isPlayer1 && (movement.y != 0)            (isPlayer1) && (movement.y > moveSpeed)           movement.y != 0                        Input.GetAxis("Horizontal1") != 0f)         (Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.S))
+        else if (isPlayer1 && movement.y == 0)
         {
-            //obj2.GetComponent<Rigidbody2D> ().gravityScale = 0;
-        }
-        else
-        {
-            //obj2.GetComponent<Rigidbody2D> ().gravityScale = 1;
-
+            obj.GetComponent<Rigidbody2D> ().gravityScale = 1;
         }
         
-        //else if (isPlayer2 && movement.y == 0)
-        //{
-            //Debug.Log(Physics2D.gravity);
-        //    obj.GetComponent<Rigidbody2D> ().gravityScale = 1;
-        //}
         obj.transform.position += tempVect;
-        //obj2.transform.position += tempVect;
-        
-        
-       
     }
     public void OnCollisionEnter2D(Collision2D collison)
     {
@@ -104,4 +63,5 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Damage");
         }
     }
+ 
 }
