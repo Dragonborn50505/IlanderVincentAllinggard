@@ -48,17 +48,17 @@ public class PlayerMovement : MonoBehaviour
         
         obj.transform.position += tempVect;
     }
-    public void OnCollisionEnter2D(Collision2D collison)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collison.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player Meet");
         }
     }
 
-    public void OnCollisionenter2D(Collider2D Collison)
+    public void OnCollisionenter2D(Collider2D collision)
     {
-        if (Collison.gameObject.tag == "Obstacle")
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Damage");
         }

@@ -4,18 +4,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour
+public class GameTimer : MonoBehaviour
 {
-    private float currentTime = 0f;
+    private float currentTime;
     private float startingTime = 10f;
-    private bool GameIsGoing = false;
-    private string sceneName;
+    private bool GameIsGoing;
+    public static string sceneName;
     
     [SerializeField] GameObject PauseMenuUi;
     [SerializeField] GameObject LostOrWinMenu;
     
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         GameIsGoing = true;
         currentTime = startingTime;
