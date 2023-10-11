@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
     private float currentTime;
-    private float startingTime = 10f;
+    private float startingTime = 30f; //Time intended to be 120f but shorten it for your convenience.
     private bool GameIsGoing;
     public static string sceneName;
     
@@ -19,8 +16,8 @@ public class GameTimer : MonoBehaviour
     {
         GameIsGoing = true;
         currentTime = startingTime;
-        Scene currentScene = SceneManager.GetActiveScene ();
-        sceneName = currentScene.name;
+        Scene currentScene = SceneManager.GetActiveScene (); //get active scene so you can use it. 
+        sceneName = currentScene.name; 
     }
 
     // Update is called once per frame

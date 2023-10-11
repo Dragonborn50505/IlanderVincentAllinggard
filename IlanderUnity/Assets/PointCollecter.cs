@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -30,7 +28,8 @@ public class PointCollecter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Players"))
         {   
-            if (p1){
+            if (p1) //Most likely reason why points dont work as intended, i am not look for what player in "collision.gameObject.CompareTag("Players")".
+            {
                 Debug.Log("Player1");
                 Vector3 spaceObjektPosition = new Vector3(x: 20, y: Random.Range(-3, 3), z: -1);
                 obj.transform.position = spaceObjektPosition;

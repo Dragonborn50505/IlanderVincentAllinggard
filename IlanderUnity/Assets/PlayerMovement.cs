@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 tempVect = new Vector3(movement.x,movement.y);
         tempVect = tempVect.normalized * moveSpeed * Time.deltaTime;
         
-        if (isPlayer1 && movement.y != 0)
+        if (isPlayer1 && movement.y != 0) //Only have gravity on one, could not make it work as i wanted so keep the still
         {
             obj.GetComponent<Rigidbody2D> ().gravityScale = 0;
         }
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         
         obj.transform.position += tempVect;
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision) // Did not use
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnCollisionenter2D(Collider2D collision)
+    public void OnCollisionenter2D(Collider2D collision) // Did not use
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {

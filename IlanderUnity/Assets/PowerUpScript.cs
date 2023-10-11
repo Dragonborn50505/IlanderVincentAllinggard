@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpScript : MonoBehaviour
@@ -14,10 +12,9 @@ public class PowerUpScript : MonoBehaviour
 
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         CurrentPowerUpTime = PowerUpTime;
-
     }
 
     // Update is called once per frame
@@ -34,12 +31,13 @@ public class PowerUpScript : MonoBehaviour
         {
             objPowerUp.position = powerUpRestart;
         }
+        
         if(PowerUpActivated)
         { 
             if (CurrentPowerUpTime > 0)
             {
                 Time.timeScale = 0.5f;
-                CurrentPowerUpTime -= 1 * Time.deltaTime;
+                CurrentPowerUpTime -= 1 * Time.deltaTime; //Count down on for how fast power-up runs out.
                 objPowerUp.position = goAway;
 
             }
@@ -65,7 +63,7 @@ public class PowerUpScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Players"))
         {
-            PowerUpActivated = true;
+            PowerUpActivated = true; // Activates the power-up.
         }
     }
     

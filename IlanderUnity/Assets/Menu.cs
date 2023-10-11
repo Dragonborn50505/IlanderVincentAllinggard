@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,33 +19,33 @@ public class Menu : MonoBehaviour
     {
         
     }
-    public void LoadCampaign()
+    private void LoadCampaign()
     {
         Campaign = true;
         SceneManager.LoadScene("Level1");
     }
 
-    public void LevelSelect()
+    private void LevelSelect()
     {
         MainMenuUi.SetActive(false);
         CampaignUi.SetActive(true);
     }
 
-    public void Level1()
+    private void Level1()
     {
         MainMenuUi.SetActive(true);
         CampaignUi.SetActive(false);
         SceneManager.LoadScene("Level1");
     }
     
-    public void Level2()
+    private void Level2()
     {
         MainMenuUi.SetActive(true);
         CampaignUi.SetActive(false);
         SceneManager.LoadScene("Level2");
     }
     
-    public void Level3()
+    private void Level3()
     {
         MainMenuUi.SetActive(true);
         CampaignUi.SetActive(false);
